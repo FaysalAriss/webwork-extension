@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Capture Div as Image",
+  "version": "1.0",
+"permissions": [
+  "scripting",
+  "activeTab",
+  "tabs"
+],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Capture Div as Image"
+  },
+"background": {
+  "scripts": ["background.js"],
+  "persistent": false
+}
+,
+  "host_permissions": ["<all_urls>"],
+
+"content_scripts": [
+  {
+    "matches": ["<all_urls>"], 
+    "js": ["content.js"]
+  }
+]
+
+}
